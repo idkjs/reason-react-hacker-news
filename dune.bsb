@@ -1,0 +1,2041 @@
+;;;;{BSB GENERATED: NO EDIT
+(subdir ./node_modules/reason-react/src
+(dirs :standard legacy)
+(rule
+(targets  React.ast)
+ (deps (:inputs  React.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  React.d)
+ (deps (:inputs  React.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  React.cmj React.cmi React.js React.js)
+ (deps (:inputs  React.ast)  (:dep_file React.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./legacy -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o React.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOM.ast)
+ (deps (:inputs  ReactDOM.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOM.d)
+ (deps (:inputs  ReactDOM.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOM.cmj ReactDOM.cmi ReactDOM.js ReactDOM.js)
+ (deps (:inputs  ReactDOM.ast)  (:dep_file ReactDOM.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./legacy -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o ReactDOM.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactEvent.ast)
+ (deps (:inputs  ReactEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactEvent.d)
+ (deps (:inputs  ReactEvent.ast ReactEvent.iast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactEvent.iast)
+ (deps (:inputs  ReactEvent.rei) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactEvent.cmi)
+ (deps (:inputs  ReactEvent.iast)  (:dep_file ReactEvent.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./legacy -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -o ReactEvent.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactEvent.cmj ReactEvent.js ReactEvent.js)
+ (deps (:inputs  ReactEvent.ast)  ReactEvent.cmi (:dep_file ReactEvent.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -bs-read-cmi -I ./legacy -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o ReactEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOMStyle.ast)
+ (deps (:inputs  ReactDOMStyle.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOMStyle.d)
+ (deps (:inputs  ReactDOMStyle.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOMStyle.cmj ReactDOMStyle.cmi ReactDOMStyle.js ReactDOMStyle.js)
+ (deps (:inputs  ReactDOMStyle.ast)  (:dep_file ReactDOMStyle.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./legacy -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o ReactDOMStyle.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOMServer.ast)
+ (deps (:inputs  ReactDOMServer.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOMServer.d)
+ (deps (:inputs  ReactDOMServer.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOMServer.cmj ReactDOMServer.cmi ReactDOMServer.js ReactDOMServer.js)
+ (deps (:inputs  ReactDOMServer.ast)  (:dep_file ReactDOMServer.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./legacy -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o ReactDOMServer.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactTestUtils.ast)
+ (deps (:inputs  ReactTestUtils.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactTestUtils.d)
+ (deps (:inputs  ReactTestUtils.ast ReactTestUtils.iast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactTestUtils.iast)
+ (deps (:inputs  ReactTestUtils.rei) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactTestUtils.cmi)
+ (deps (:inputs  ReactTestUtils.iast)  (:dep_file ReactTestUtils.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./legacy -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -o ReactTestUtils.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactTestUtils.cmj ReactTestUtils.js ReactTestUtils.js)
+ (deps (:inputs  ReactTestUtils.ast)  ReactTestUtils.cmi (:dep_file ReactTestUtils.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -bs-read-cmi -I ./legacy -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o ReactTestUtils.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactRouter.ast)
+ (deps (:inputs  ReasonReactRouter.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactRouter.d)
+ (deps (:inputs  ReasonReactRouter.ast ReasonReactRouter.iast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactRouter.iast)
+ (deps (:inputs  ReasonReactRouter.rei) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactRouter.cmi)
+ (deps (:inputs  ReasonReactRouter.iast)  (:dep_file ReasonReactRouter.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./legacy -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -o ReasonReactRouter.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactRouter.cmj ReasonReactRouter.js ReasonReactRouter.js)
+ (deps (:inputs  ReasonReactRouter.ast)  ReasonReactRouter.cmi (:dep_file ReasonReactRouter.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -bs-read-cmi -I ./legacy -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o ReasonReactRouter.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactErrorBoundary.ast)
+ (deps (:inputs  ReasonReactErrorBoundary.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactErrorBoundary.d)
+ (deps (:inputs  ReasonReactErrorBoundary.ast ReasonReactErrorBoundary.iast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactErrorBoundary.iast)
+ (deps (:inputs  ReasonReactErrorBoundary.rei) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactErrorBoundary.cmi)
+ (deps (:inputs  ReasonReactErrorBoundary.iast)  (:dep_file ReasonReactErrorBoundary.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./legacy -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -o ReasonReactErrorBoundary.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactErrorBoundary.cmj ReasonReactErrorBoundary.js ReasonReactErrorBoundary.js)
+ (deps (:inputs  ReasonReactErrorBoundary.ast)  ReasonReactErrorBoundary.cmi (:dep_file ReasonReactErrorBoundary.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -bs-read-cmi -I ./legacy -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o ReasonReactErrorBoundary.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ 
+(alias (name bsb_world)(deps  ReasonReactErrorBoundary.js ReasonReactErrorBoundary.js ReasonReactRouter.js ReasonReactRouter.js ReactTestUtils.js ReactTestUtils.js ReactDOMServer.js ReactDOMServer.js ReactDOMStyle.js ReactDOMStyle.js ReactEvent.js ReactEvent.js ReactDOM.js ReactDOM.js React.js React.js)
+(enabled_if (= %{ocaml_version} "4.12.0+BS"))))
+(subdir ./node_modules/reason-react/src/legacy
+(rule
+(targets  ReactDOMRe.ast)
+ (deps (:inputs  ReactDOMRe.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOMRe.d)
+ (deps (:inputs  ReactDOMRe.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOMRe.cmj ReactDOMRe.cmi ReactDOMRe.js ReactDOMRe.js)
+ (deps (:inputs  ReactDOMRe.ast)  (:dep_file ReactDOMRe.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src/legacy:.js -bs-package-output es6:src/legacy:.js -o ReactDOMRe.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReact.ast)
+ (deps (:inputs  ReasonReact.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReact.d)
+ (deps (:inputs  ReasonReact.ast ReasonReact.iast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReact.iast)
+ (deps (:inputs  ReasonReact.rei) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReact.cmi)
+ (deps (:inputs  ReasonReact.iast)  (:dep_file ReasonReact.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -o ReasonReact.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReact.cmj ReasonReact.js ReasonReact.js)
+ (deps (:inputs  ReasonReact.ast)  ReasonReact.cmi (:dep_file ReasonReact.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -bs-read-cmi -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src/legacy:.js -bs-package-output es6:src/legacy:.js -o ReasonReact.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactEventRe.ast)
+ (deps (:inputs  ReactEventRe.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactEventRe.d)
+ (deps (:inputs  ReactEventRe.ast ReactEventRe.iast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactEventRe.iast)
+ (deps (:inputs  ReactEventRe.rei) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactEventRe.cmi)
+ (deps (:inputs  ReactEventRe.iast)  (:dep_file ReactEventRe.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -o ReactEventRe.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactEventRe.cmj ReactEventRe.js ReactEventRe.js)
+ (deps (:inputs  ReactEventRe.ast)  ReactEventRe.cmi (:dep_file ReactEventRe.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -bs-read-cmi -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src/legacy:.js -bs-package-output es6:src/legacy:.js -o ReactEventRe.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOMServerRe.ast)
+ (deps (:inputs  ReactDOMServerRe.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOMServerRe.d)
+ (deps (:inputs  ReactDOMServerRe.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReactDOMServerRe.cmj ReactDOMServerRe.cmi ReactDOMServerRe.js ReactDOMServerRe.js)
+ (deps (:inputs  ReactDOMServerRe.ast)  (:dep_file ReactDOMServerRe.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src/legacy:.js -bs-package-output es6:src/legacy:.js -o ReactDOMServerRe.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactCompat.ast)
+ (deps (:inputs  ReasonReactCompat.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactCompat.d)
+ (deps (:inputs  ReasonReactCompat.ast ReasonReactCompat.iast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactCompat.iast)
+ (deps (:inputs  ReasonReactCompat.rei) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactCompat.cmi)
+ (deps (:inputs  ReasonReactCompat.iast)  (:dep_file ReasonReactCompat.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -o ReasonReactCompat.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactCompat.cmj ReasonReactCompat.js ReasonReactCompat.js)
+ (deps (:inputs  ReasonReactCompat.ast)  ReasonReactCompat.cmi (:dep_file ReasonReactCompat.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -bs-read-cmi -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src/legacy:.js -bs-package-output es6:src/legacy:.js -o ReasonReactCompat.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactOptimizedCreateClass.ast)
+ (deps (:inputs  ReasonReactOptimizedCreateClass.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-jsx 3 -bs-no-version-header -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactOptimizedCreateClass.d)
+ (deps (:inputs  ReasonReactOptimizedCreateClass.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/reason-react  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  ReasonReactOptimizedCreateClass.cmj ReasonReactOptimizedCreateClass.cmi ReasonReactOptimizedCreateClass.js ReasonReactOptimizedCreateClass.js)
+ (deps (:inputs  ReasonReactOptimizedCreateClass.ast)  (:dep_file ReasonReactOptimizedCreateClass.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name reason-react -bs-package-output commonjs:src/legacy:.js -bs-package-output es6:src/legacy:.js -o ReasonReactOptimizedCreateClass.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ 
+(alias (name bsb_world)(deps  ReasonReactOptimizedCreateClass.js ReasonReactOptimizedCreateClass.js ReasonReactCompat.js ReasonReactCompat.js ReactDOMServerRe.js ReactDOMServerRe.js ReactEventRe.js ReactEventRe.js ReasonReact.js ReasonReact.js ReactDOMRe.js ReactDOMRe.js)
+(enabled_if (= %{ocaml_version} "4.12.0+BS"))))
+
+
+
+(subdir ./node_modules/bs-fetch/src
+(rule
+(targets  Fetch.ast)
+ (deps (:inputs  Fetch.ml) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Fetch.d)
+ (deps (:inputs  Fetch.ast Fetch.iast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-fetch  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Fetch.iast)
+ (deps (:inputs  Fetch.mli) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Fetch.cmi)
+ (deps (:inputs  Fetch.iast)  (:dep_file Fetch.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -o Fetch.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Fetch.cmj Fetch.js Fetch.js)
+ (deps (:inputs  Fetch.ast)  Fetch.cmi (:dep_file Fetch.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -bs-read-cmi -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-fetch -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o Fetch.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  bs_fetch.ast)
+ (deps (:inputs  bs_fetch.ml) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  bs_fetch.d)
+ (deps (:inputs  bs_fetch.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-fetch  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  bs_fetch.cmj bs_fetch.cmi bs_fetch.js bs_fetch.js)
+ (deps (:inputs  bs_fetch.ast)  (:dep_file bs_fetch.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-fetch -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o bs_fetch.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ 
+(alias (name bsb_world)(deps  bs_fetch.js bs_fetch.js Fetch.js Fetch.js)
+(enabled_if (= %{ocaml_version} "4.12.0+BS"))))
+
+
+
+(subdir ./node_modules/@glennsl/bs-json/src
+(rule
+(targets  Json.ast)
+ (deps (:inputs  Json.ml) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json.d)
+ (deps (:inputs  Json.ast Json.iast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/@glennsl/bs-json  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json.iast)
+ (deps (:inputs  Json.mli) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json.cmi)
+ (deps (:inputs  Json.iast)  (:dep_file Json.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -o Json.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json.cmj Json.js Json.js)
+ (deps (:inputs  Json.ast)  Json.cmi (:dep_file Json.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -bs-read-cmi -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name @glennsl/bs-json -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o Json.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json_decode.ast)
+ (deps (:inputs  Json_decode.ml) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json_decode.d)
+ (deps (:inputs  Json_decode.ast Json_decode.iast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/@glennsl/bs-json  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json_decode.iast)
+ (deps (:inputs  Json_decode.mli) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json_decode.cmi)
+ (deps (:inputs  Json_decode.iast)  (:dep_file Json_decode.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -o Json_decode.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json_decode.cmj Json_decode.js Json_decode.js)
+ (deps (:inputs  Json_decode.ast)  Json_decode.cmi (:dep_file Json_decode.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -bs-read-cmi -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name @glennsl/bs-json -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o Json_decode.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json_encode.ast)
+ (deps (:inputs  Json_encode.ml) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json_encode.d)
+ (deps (:inputs  Json_encode.ast Json_encode.iast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/@glennsl/bs-json  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json_encode.iast)
+ (deps (:inputs  Json_encode.mli) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json_encode.cmi)
+ (deps (:inputs  Json_encode.iast)  (:dep_file Json_encode.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -o Json_encode.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Json_encode.cmj Json_encode.js Json_encode.js)
+ (deps (:inputs  Json_encode.ast)  Json_encode.cmi (:dep_file Json_encode.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -bs-read-cmi -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name @glennsl/bs-json -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o Json_encode.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ 
+(alias (name bsb_world)(deps  Json_encode.js Json_encode.js Json_decode.js Json_decode.js Json.js Json.js)
+(enabled_if (= %{ocaml_version} "4.12.0+BS"))))
+
+
+
+(subdir ./node_modules/bs-webapi/src
+(dirs :standard Webapi)
+(rule
+(targets  Webapi.ast)
+ (deps (:inputs  Webapi.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi.d)
+ (deps (:inputs  Webapi.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi.cmj Webapi.cmi Webapi.js Webapi.js)
+ (deps (:inputs  Webapi.ast)  (:dep_file Webapi.d) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./Webapi/Webapi__Canvas -I ./Webapi/Webapi__Dom -I ./Webapi -I .   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o Webapi.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ 
+(alias (name bsb_world)(deps  Webapi.js Webapi.js)
+(enabled_if (= %{ocaml_version} "4.12.0+BS"))))
+(subdir ./node_modules/bs-webapi/src/Webapi
+(dirs :standard Webapi__Canvas Webapi__Dom)
+(rule
+(targets  Webapi__Dom.ast)
+ (deps (:inputs  Webapi__Dom.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom.d)
+ (deps (:inputs  Webapi__Dom.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom.cmj Webapi__Dom.cmi Webapi__Dom.js Webapi__Dom.js)
+ (deps (:inputs  Webapi__Dom.ast)  (:dep_file Webapi__Dom.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./Webapi__Canvas -I ./Webapi__Dom -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi:.js -bs-package-output es6:src/Webapi:.js -o Webapi__Dom.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Url.ast)
+ (deps (:inputs  Webapi__Url.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Url.d)
+ (deps (:inputs  Webapi__Url.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Url.cmj Webapi__Url.cmi Webapi__Url.js Webapi__Url.js)
+ (deps (:inputs  Webapi__Url.ast)  (:dep_file Webapi__Url.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./Webapi__Canvas -I ./Webapi__Dom -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi:.js -bs-package-output es6:src/Webapi:.js -o Webapi__Url.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__File.ast)
+ (deps (:inputs  Webapi__File.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__File.d)
+ (deps (:inputs  Webapi__File.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__File.cmj Webapi__File.cmi Webapi__File.js Webapi__File.js)
+ (deps (:inputs  Webapi__File.ast)  (:dep_file Webapi__File.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./Webapi__Canvas -I ./Webapi__Dom -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi:.js -bs-package-output es6:src/Webapi:.js -o Webapi__File.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Base64.ast)
+ (deps (:inputs  Webapi__Base64.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Base64.d)
+ (deps (:inputs  Webapi__Base64.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Base64.cmj Webapi__Base64.cmi Webapi__Base64.js Webapi__Base64.js)
+ (deps (:inputs  Webapi__Base64.ast)  (:dep_file Webapi__Base64.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./Webapi__Canvas -I ./Webapi__Dom -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi:.js -bs-package-output es6:src/Webapi:.js -o Webapi__Base64.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Canvas.ast)
+ (deps (:inputs  Webapi__Canvas.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Canvas.d)
+ (deps (:inputs  Webapi__Canvas.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Canvas.cmj Webapi__Canvas.cmi Webapi__Canvas.js Webapi__Canvas.js)
+ (deps (:inputs  Webapi__Canvas.ast)  (:dep_file Webapi__Canvas.d) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ./Webapi__Canvas -I ./Webapi__Dom -I . -I ..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi:.js -bs-package-output es6:src/Webapi:.js -o Webapi__Canvas.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ 
+(alias (name bsb_world)(deps  Webapi__Canvas.js Webapi__Canvas.js Webapi__Base64.js Webapi__Base64.js Webapi__File.js Webapi__File.js Webapi__Url.js Webapi__Url.js Webapi__Dom.js Webapi__Dom.js)
+(enabled_if (= %{ocaml_version} "4.12.0+BS"))))
+(subdir ./node_modules/bs-webapi/src/Webapi/Webapi__Dom
+(rule
+(targets  Webapi__Dom__Attr.ast)
+ (deps (:inputs  Webapi__Dom__Attr.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Attr.d)
+ (deps (:inputs  Webapi__Dom__Attr.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Attr.cmj Webapi__Dom__Attr.cmi Webapi__Dom__Attr.js Webapi__Dom__Attr.js)
+ (deps (:inputs  Webapi__Dom__Attr.ast)  (:dep_file Webapi__Dom__Attr.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Attr.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Node.ast)
+ (deps (:inputs  Webapi__Dom__Node.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Node.d)
+ (deps (:inputs  Webapi__Dom__Node.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Node.cmj Webapi__Dom__Node.cmi Webapi__Dom__Node.js Webapi__Dom__Node.js)
+ (deps (:inputs  Webapi__Dom__Node.ast)  (:dep_file Webapi__Dom__Node.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Node.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Text.ast)
+ (deps (:inputs  Webapi__Dom__Text.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Text.d)
+ (deps (:inputs  Webapi__Dom__Text.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Text.cmj Webapi__Dom__Text.cmi Webapi__Dom__Text.js Webapi__Dom__Text.js)
+ (deps (:inputs  Webapi__Dom__Text.ast)  (:dep_file Webapi__Dom__Text.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Text.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Event.ast)
+ (deps (:inputs  Webapi__Dom__Event.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Event.d)
+ (deps (:inputs  Webapi__Dom__Event.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Event.cmj Webapi__Dom__Event.cmi Webapi__Dom__Event.js Webapi__Dom__Event.js)
+ (deps (:inputs  Webapi__Dom__Event.ast)  (:dep_file Webapi__Dom__Event.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Event.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Image.ast)
+ (deps (:inputs  Webapi__Dom__Image.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Image.d)
+ (deps (:inputs  Webapi__Dom__Image.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Image.cmj Webapi__Dom__Image.cmi Webapi__Dom__Image.js Webapi__Dom__Image.js)
+ (deps (:inputs  Webapi__Dom__Image.ast)  (:dep_file Webapi__Dom__Image.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Image.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Range.ast)
+ (deps (:inputs  Webapi__Dom__Range.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Range.d)
+ (deps (:inputs  Webapi__Dom__Range.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Range.cmj Webapi__Dom__Range.cmi Webapi__Dom__Range.js Webapi__Dom__Range.js)
+ (deps (:inputs  Webapi__Dom__Range.ast)  (:dep_file Webapi__Dom__Range.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Range.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Types.ast)
+ (deps (:inputs  Webapi__Dom__Types.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Types.d)
+ (deps (:inputs  Webapi__Dom__Types.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Types.cmj Webapi__Dom__Types.cmi Webapi__Dom__Types.js Webapi__Dom__Types.js)
+ (deps (:inputs  Webapi__Dom__Types.ast)  (:dep_file Webapi__Dom__Types.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Types.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Window.ast)
+ (deps (:inputs  Webapi__Dom__Window.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Window.d)
+ (deps (:inputs  Webapi__Dom__Window.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Window.cmj Webapi__Dom__Window.cmi Webapi__Dom__Window.js Webapi__Dom__Window.js)
+ (deps (:inputs  Webapi__Dom__Window.ast)  (:dep_file Webapi__Dom__Window.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Window.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Comment.ast)
+ (deps (:inputs  Webapi__Dom__Comment.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Comment.d)
+ (deps (:inputs  Webapi__Dom__Comment.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Comment.cmj Webapi__Dom__Comment.cmi Webapi__Dom__Comment.js Webapi__Dom__Comment.js)
+ (deps (:inputs  Webapi__Dom__Comment.ast)  (:dep_file Webapi__Dom__Comment.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Comment.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DomRect.ast)
+ (deps (:inputs  Webapi__Dom__DomRect.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DomRect.d)
+ (deps (:inputs  Webapi__Dom__DomRect.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DomRect.cmj Webapi__Dom__DomRect.cmi Webapi__Dom__DomRect.js Webapi__Dom__DomRect.js)
+ (deps (:inputs  Webapi__Dom__DomRect.ast)  (:dep_file Webapi__Dom__DomRect.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__DomRect.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Element.ast)
+ (deps (:inputs  Webapi__Dom__Element.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Element.d)
+ (deps (:inputs  Webapi__Dom__Element.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Element.cmj Webapi__Dom__Element.cmi Webapi__Dom__Element.js Webapi__Dom__Element.js)
+ (deps (:inputs  Webapi__Dom__Element.ast)  (:dep_file Webapi__Dom__Element.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Element.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__History.ast)
+ (deps (:inputs  Webapi__Dom__History.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__History.d)
+ (deps (:inputs  Webapi__Dom__History.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__History.cmj Webapi__Dom__History.cmi Webapi__Dom__History.js Webapi__Dom__History.js)
+ (deps (:inputs  Webapi__Dom__History.ast)  (:dep_file Webapi__Dom__History.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__History.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__UiEvent.ast)
+ (deps (:inputs  Webapi__Dom__UiEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__UiEvent.d)
+ (deps (:inputs  Webapi__Dom__UiEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__UiEvent.cmj Webapi__Dom__UiEvent.cmi Webapi__Dom__UiEvent.js Webapi__Dom__UiEvent.js)
+ (deps (:inputs  Webapi__Dom__UiEvent.ast)  (:dep_file Webapi__Dom__UiEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__UiEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Document.ast)
+ (deps (:inputs  Webapi__Dom__Document.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Document.d)
+ (deps (:inputs  Webapi__Dom__Document.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Document.cmj Webapi__Dom__Document.cmi Webapi__Dom__Document.js Webapi__Dom__Document.js)
+ (deps (:inputs  Webapi__Dom__Document.ast)  (:dep_file Webapi__Dom__Document.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Document.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Location.ast)
+ (deps (:inputs  Webapi__Dom__Location.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Location.d)
+ (deps (:inputs  Webapi__Dom__Location.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Location.cmj Webapi__Dom__Location.cmi Webapi__Dom__Location.js Webapi__Dom__Location.js)
+ (deps (:inputs  Webapi__Dom__Location.ast)  (:dep_file Webapi__Dom__Location.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Location.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NodeList.ast)
+ (deps (:inputs  Webapi__Dom__NodeList.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NodeList.d)
+ (deps (:inputs  Webapi__Dom__NodeList.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NodeList.cmj Webapi__Dom__NodeList.cmi Webapi__Dom__NodeList.js Webapi__Dom__NodeList.js)
+ (deps (:inputs  Webapi__Dom__NodeList.ast)  (:dep_file Webapi__Dom__NodeList.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__NodeList.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Slotable.ast)
+ (deps (:inputs  Webapi__Dom__Slotable.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Slotable.d)
+ (deps (:inputs  Webapi__Dom__Slotable.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Slotable.cmj Webapi__Dom__Slotable.cmi Webapi__Dom__Slotable.js Webapi__Dom__Slotable.js)
+ (deps (:inputs  Webapi__Dom__Slotable.ast)  (:dep_file Webapi__Dom__Slotable.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Slotable.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ChildNode.ast)
+ (deps (:inputs  Webapi__Dom__ChildNode.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ChildNode.d)
+ (deps (:inputs  Webapi__Dom__ChildNode.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ChildNode.cmj Webapi__Dom__ChildNode.cmi Webapi__Dom__ChildNode.js Webapi__Dom__ChildNode.js)
+ (deps (:inputs  Webapi__Dom__ChildNode.ast)  (:dep_file Webapi__Dom__ChildNode.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__ChildNode.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DragEvent.ast)
+ (deps (:inputs  Webapi__Dom__DragEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DragEvent.d)
+ (deps (:inputs  Webapi__Dom__DragEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DragEvent.cmj Webapi__Dom__DragEvent.cmi Webapi__Dom__DragEvent.js Webapi__Dom__DragEvent.js)
+ (deps (:inputs  Webapi__Dom__DragEvent.ast)  (:dep_file Webapi__Dom__DragEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__DragEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Selection.ast)
+ (deps (:inputs  Webapi__Dom__Selection.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Selection.d)
+ (deps (:inputs  Webapi__Dom__Selection.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__Selection.cmj Webapi__Dom__Selection.cmi Webapi__Dom__Selection.js Webapi__Dom__Selection.js)
+ (deps (:inputs  Webapi__Dom__Selection.ast)  (:dep_file Webapi__Dom__Selection.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__Selection.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TimeEvent.ast)
+ (deps (:inputs  Webapi__Dom__TimeEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TimeEvent.d)
+ (deps (:inputs  Webapi__Dom__TimeEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TimeEvent.cmj Webapi__Dom__TimeEvent.cmi Webapi__Dom__TimeEvent.js Webapi__Dom__TimeEvent.js)
+ (deps (:inputs  Webapi__Dom__TimeEvent.ast)  (:dep_file Webapi__Dom__TimeEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__TimeEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CloseEvent.ast)
+ (deps (:inputs  Webapi__Dom__CloseEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CloseEvent.d)
+ (deps (:inputs  Webapi__Dom__CloseEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CloseEvent.cmj Webapi__Dom__CloseEvent.cmi Webapi__Dom__CloseEvent.js Webapi__Dom__CloseEvent.js)
+ (deps (:inputs  Webapi__Dom__CloseEvent.ast)  (:dep_file Webapi__Dom__CloseEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__CloseEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ErrorEvent.ast)
+ (deps (:inputs  Webapi__Dom__ErrorEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ErrorEvent.d)
+ (deps (:inputs  Webapi__Dom__ErrorEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ErrorEvent.cmj Webapi__Dom__ErrorEvent.cmi Webapi__Dom__ErrorEvent.js Webapi__Dom__ErrorEvent.js)
+ (deps (:inputs  Webapi__Dom__ErrorEvent.ast)  (:dep_file Webapi__Dom__ErrorEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__ErrorEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__FocusEvent.ast)
+ (deps (:inputs  Webapi__Dom__FocusEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__FocusEvent.d)
+ (deps (:inputs  Webapi__Dom__FocusEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__FocusEvent.cmj Webapi__Dom__FocusEvent.cmi Webapi__Dom__FocusEvent.js Webapi__Dom__FocusEvent.js)
+ (deps (:inputs  Webapi__Dom__FocusEvent.ast)  (:dep_file Webapi__Dom__FocusEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__FocusEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__InputEvent.ast)
+ (deps (:inputs  Webapi__Dom__InputEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__InputEvent.d)
+ (deps (:inputs  Webapi__Dom__InputEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__InputEvent.cmj Webapi__Dom__InputEvent.cmi Webapi__Dom__InputEvent.js Webapi__Dom__InputEvent.js)
+ (deps (:inputs  Webapi__Dom__InputEvent.ast)  (:dep_file Webapi__Dom__InputEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__InputEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__MouseEvent.ast)
+ (deps (:inputs  Webapi__Dom__MouseEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__MouseEvent.d)
+ (deps (:inputs  Webapi__Dom__MouseEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__MouseEvent.cmj Webapi__Dom__MouseEvent.cmi Webapi__Dom__MouseEvent.js Webapi__Dom__MouseEvent.js)
+ (deps (:inputs  Webapi__Dom__MouseEvent.ast)  (:dep_file Webapi__Dom__MouseEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__MouseEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NodeFilter.ast)
+ (deps (:inputs  Webapi__Dom__NodeFilter.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NodeFilter.d)
+ (deps (:inputs  Webapi__Dom__NodeFilter.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NodeFilter.cmj Webapi__Dom__NodeFilter.cmi Webapi__Dom__NodeFilter.js Webapi__Dom__NodeFilter.js)
+ (deps (:inputs  Webapi__Dom__NodeFilter.ast)  (:dep_file Webapi__Dom__NodeFilter.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__NodeFilter.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ParentNode.ast)
+ (deps (:inputs  Webapi__Dom__ParentNode.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ParentNode.d)
+ (deps (:inputs  Webapi__Dom__ParentNode.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ParentNode.cmj Webapi__Dom__ParentNode.cmi Webapi__Dom__ParentNode.js Webapi__Dom__ParentNode.js)
+ (deps (:inputs  Webapi__Dom__ParentNode.ast)  (:dep_file Webapi__Dom__ParentNode.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__ParentNode.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ShadowRoot.ast)
+ (deps (:inputs  Webapi__Dom__ShadowRoot.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ShadowRoot.d)
+ (deps (:inputs  Webapi__Dom__ShadowRoot.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ShadowRoot.cmj Webapi__Dom__ShadowRoot.cmi Webapi__Dom__ShadowRoot.js Webapi__Dom__ShadowRoot.js)
+ (deps (:inputs  Webapi__Dom__ShadowRoot.ast)  (:dep_file Webapi__Dom__ShadowRoot.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__ShadowRoot.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TouchEvent.ast)
+ (deps (:inputs  Webapi__Dom__TouchEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TouchEvent.d)
+ (deps (:inputs  Webapi__Dom__TouchEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TouchEvent.cmj Webapi__Dom__TouchEvent.cmi Webapi__Dom__TouchEvent.js Webapi__Dom__TouchEvent.js)
+ (deps (:inputs  Webapi__Dom__TouchEvent.ast)  (:dep_file Webapi__Dom__TouchEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__TouchEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TrackEvent.ast)
+ (deps (:inputs  Webapi__Dom__TrackEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TrackEvent.d)
+ (deps (:inputs  Webapi__Dom__TrackEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TrackEvent.cmj Webapi__Dom__TrackEvent.cmi Webapi__Dom__TrackEvent.js Webapi__Dom__TrackEvent.js)
+ (deps (:inputs  Webapi__Dom__TrackEvent.ast)  (:dep_file Webapi__Dom__TrackEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__TrackEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TreeWalker.ast)
+ (deps (:inputs  Webapi__Dom__TreeWalker.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TreeWalker.d)
+ (deps (:inputs  Webapi__Dom__TreeWalker.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TreeWalker.cmj Webapi__Dom__TreeWalker.cmi Webapi__Dom__TreeWalker.js Webapi__Dom__TreeWalker.js)
+ (deps (:inputs  Webapi__Dom__TreeWalker.ast)  (:dep_file Webapi__Dom__TreeWalker.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__TreeWalker.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__WheelEvent.ast)
+ (deps (:inputs  Webapi__Dom__WheelEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__WheelEvent.d)
+ (deps (:inputs  Webapi__Dom__WheelEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__WheelEvent.cmj Webapi__Dom__WheelEvent.cmi Webapi__Dom__WheelEvent.js Webapi__Dom__WheelEvent.js)
+ (deps (:inputs  Webapi__Dom__WheelEvent.ast)  (:dep_file Webapi__Dom__WheelEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__WheelEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CustomEvent.ast)
+ (deps (:inputs  Webapi__Dom__CustomEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CustomEvent.d)
+ (deps (:inputs  Webapi__Dom__CustomEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CustomEvent.cmj Webapi__Dom__CustomEvent.cmi Webapi__Dom__CustomEvent.js Webapi__Dom__CustomEvent.js)
+ (deps (:inputs  Webapi__Dom__CustomEvent.ast)  (:dep_file Webapi__Dom__CustomEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__CustomEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__EventTarget.ast)
+ (deps (:inputs  Webapi__Dom__EventTarget.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__EventTarget.d)
+ (deps (:inputs  Webapi__Dom__EventTarget.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__EventTarget.cmj Webapi__Dom__EventTarget.cmi Webapi__Dom__EventTarget.js Webapi__Dom__EventTarget.js)
+ (deps (:inputs  Webapi__Dom__EventTarget.ast)  (:dep_file Webapi__Dom__EventTarget.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__EventTarget.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlElement.ast)
+ (deps (:inputs  Webapi__Dom__HtmlElement.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlElement.d)
+ (deps (:inputs  Webapi__Dom__HtmlElement.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlElement.cmj Webapi__Dom__HtmlElement.cmi Webapi__Dom__HtmlElement.js Webapi__Dom__HtmlElement.js)
+ (deps (:inputs  Webapi__Dom__HtmlElement.ast)  (:dep_file Webapi__Dom__HtmlElement.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__HtmlElement.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CdataSection.ast)
+ (deps (:inputs  Webapi__Dom__CdataSection.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CdataSection.d)
+ (deps (:inputs  Webapi__Dom__CdataSection.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CdataSection.cmj Webapi__Dom__CdataSection.cmi Webapi__Dom__CdataSection.js Webapi__Dom__CdataSection.js)
+ (deps (:inputs  Webapi__Dom__CdataSection.ast)  (:dep_file Webapi__Dom__CdataSection.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__CdataSection.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DocumentType.ast)
+ (deps (:inputs  Webapi__Dom__DocumentType.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DocumentType.d)
+ (deps (:inputs  Webapi__Dom__DocumentType.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DocumentType.cmj Webapi__Dom__DocumentType.cmi Webapi__Dom__DocumentType.js Webapi__Dom__DocumentType.js)
+ (deps (:inputs  Webapi__Dom__DocumentType.ast)  (:dep_file Webapi__Dom__DocumentType.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__DocumentType.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DomTokenList.ast)
+ (deps (:inputs  Webapi__Dom__DomTokenList.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DomTokenList.d)
+ (deps (:inputs  Webapi__Dom__DomTokenList.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DomTokenList.cmj Webapi__Dom__DomTokenList.cmi Webapi__Dom__DomTokenList.js Webapi__Dom__DomTokenList.js)
+ (deps (:inputs  Webapi__Dom__DomTokenList.ast)  (:dep_file Webapi__Dom__DomTokenList.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__DomTokenList.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlDocument.ast)
+ (deps (:inputs  Webapi__Dom__HtmlDocument.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlDocument.d)
+ (deps (:inputs  Webapi__Dom__HtmlDocument.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlDocument.cmj Webapi__Dom__HtmlDocument.cmi Webapi__Dom__HtmlDocument.js Webapi__Dom__HtmlDocument.js)
+ (deps (:inputs  Webapi__Dom__HtmlDocument.ast)  (:dep_file Webapi__Dom__HtmlDocument.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__HtmlDocument.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NamedNodeMap.ast)
+ (deps (:inputs  Webapi__Dom__NamedNodeMap.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NamedNodeMap.d)
+ (deps (:inputs  Webapi__Dom__NamedNodeMap.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NamedNodeMap.cmj Webapi__Dom__NamedNodeMap.cmi Webapi__Dom__NamedNodeMap.js Webapi__Dom__NamedNodeMap.js)
+ (deps (:inputs  Webapi__Dom__NamedNodeMap.ast)  (:dep_file Webapi__Dom__NamedNodeMap.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__NamedNodeMap.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NodeIterator.ast)
+ (deps (:inputs  Webapi__Dom__NodeIterator.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NodeIterator.d)
+ (deps (:inputs  Webapi__Dom__NodeIterator.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NodeIterator.cmj Webapi__Dom__NodeIterator.cmi Webapi__Dom__NodeIterator.js Webapi__Dom__NodeIterator.js)
+ (deps (:inputs  Webapi__Dom__NodeIterator.ast)  (:dep_file Webapi__Dom__NodeIterator.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__NodeIterator.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__PointerEvent.ast)
+ (deps (:inputs  Webapi__Dom__PointerEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__PointerEvent.d)
+ (deps (:inputs  Webapi__Dom__PointerEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__PointerEvent.cmj Webapi__Dom__PointerEvent.cmi Webapi__Dom__PointerEvent.js Webapi__Dom__PointerEvent.js)
+ (deps (:inputs  Webapi__Dom__PointerEvent.ast)  (:dep_file Webapi__Dom__PointerEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__PointerEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__RelatedEvent.ast)
+ (deps (:inputs  Webapi__Dom__RelatedEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__RelatedEvent.d)
+ (deps (:inputs  Webapi__Dom__RelatedEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__RelatedEvent.cmj Webapi__Dom__RelatedEvent.cmi Webapi__Dom__RelatedEvent.js Webapi__Dom__RelatedEvent.js)
+ (deps (:inputs  Webapi__Dom__RelatedEvent.ast)  (:dep_file Webapi__Dom__RelatedEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__RelatedEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__StorageEvent.ast)
+ (deps (:inputs  Webapi__Dom__StorageEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__StorageEvent.d)
+ (deps (:inputs  Webapi__Dom__StorageEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__StorageEvent.cmj Webapi__Dom__StorageEvent.cmi Webapi__Dom__StorageEvent.js Webapi__Dom__StorageEvent.js)
+ (deps (:inputs  Webapi__Dom__StorageEvent.ast)  (:dep_file Webapi__Dom__StorageEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__StorageEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__SvgZoomEvent.ast)
+ (deps (:inputs  Webapi__Dom__SvgZoomEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__SvgZoomEvent.d)
+ (deps (:inputs  Webapi__Dom__SvgZoomEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__SvgZoomEvent.cmj Webapi__Dom__SvgZoomEvent.cmi Webapi__Dom__SvgZoomEvent.js Webapi__Dom__SvgZoomEvent.js)
+ (deps (:inputs  Webapi__Dom__SvgZoomEvent.ast)  (:dep_file Webapi__Dom__SvgZoomEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__SvgZoomEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CharacterData.ast)
+ (deps (:inputs  Webapi__Dom__CharacterData.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CharacterData.d)
+ (deps (:inputs  Webapi__Dom__CharacterData.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CharacterData.cmj Webapi__Dom__CharacterData.cmi Webapi__Dom__CharacterData.js Webapi__Dom__CharacterData.js)
+ (deps (:inputs  Webapi__Dom__CharacterData.ast)  (:dep_file Webapi__Dom__CharacterData.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__CharacterData.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__KeyboardEvent.ast)
+ (deps (:inputs  Webapi__Dom__KeyboardEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__KeyboardEvent.d)
+ (deps (:inputs  Webapi__Dom__KeyboardEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__KeyboardEvent.cmj Webapi__Dom__KeyboardEvent.cmi Webapi__Dom__KeyboardEvent.js Webapi__Dom__KeyboardEvent.js)
+ (deps (:inputs  Webapi__Dom__KeyboardEvent.ast)  (:dep_file Webapi__Dom__KeyboardEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__KeyboardEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__PopStateEvent.ast)
+ (deps (:inputs  Webapi__Dom__PopStateEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__PopStateEvent.d)
+ (deps (:inputs  Webapi__Dom__PopStateEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__PopStateEvent.cmj Webapi__Dom__PopStateEvent.cmi Webapi__Dom__PopStateEvent.js Webapi__Dom__PopStateEvent.js)
+ (deps (:inputs  Webapi__Dom__PopStateEvent.ast)  (:dep_file Webapi__Dom__PopStateEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__PopStateEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ProgressEvent.ast)
+ (deps (:inputs  Webapi__Dom__ProgressEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ProgressEvent.d)
+ (deps (:inputs  Webapi__Dom__ProgressEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ProgressEvent.cmj Webapi__Dom__ProgressEvent.cmi Webapi__Dom__ProgressEvent.js Webapi__Dom__ProgressEvent.js)
+ (deps (:inputs  Webapi__Dom__ProgressEvent.ast)  (:dep_file Webapi__Dom__ProgressEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__ProgressEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ValidityState.ast)
+ (deps (:inputs  Webapi__Dom__ValidityState.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ValidityState.d)
+ (deps (:inputs  Webapi__Dom__ValidityState.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ValidityState.cmj Webapi__Dom__ValidityState.cmi Webapi__Dom__ValidityState.js Webapi__Dom__ValidityState.js)
+ (deps (:inputs  Webapi__Dom__ValidityState.ast)  (:dep_file Webapi__Dom__ValidityState.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__ValidityState.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__AnimationEvent.ast)
+ (deps (:inputs  Webapi__Dom__AnimationEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__AnimationEvent.d)
+ (deps (:inputs  Webapi__Dom__AnimationEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__AnimationEvent.cmj Webapi__Dom__AnimationEvent.cmi Webapi__Dom__AnimationEvent.js Webapi__Dom__AnimationEvent.js)
+ (deps (:inputs  Webapi__Dom__AnimationEvent.ast)  (:dep_file Webapi__Dom__AnimationEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__AnimationEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ClipboardEvent.ast)
+ (deps (:inputs  Webapi__Dom__ClipboardEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ClipboardEvent.d)
+ (deps (:inputs  Webapi__Dom__ClipboardEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ClipboardEvent.cmj Webapi__Dom__ClipboardEvent.cmi Webapi__Dom__ClipboardEvent.js Webapi__Dom__ClipboardEvent.js)
+ (deps (:inputs  Webapi__Dom__ClipboardEvent.ast)  (:dep_file Webapi__Dom__ClipboardEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__ClipboardEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlCollection.ast)
+ (deps (:inputs  Webapi__Dom__HtmlCollection.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlCollection.d)
+ (deps (:inputs  Webapi__Dom__HtmlCollection.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlCollection.cmj Webapi__Dom__HtmlCollection.cmi Webapi__Dom__HtmlCollection.js Webapi__Dom__HtmlCollection.js)
+ (deps (:inputs  Webapi__Dom__HtmlCollection.ast)  (:dep_file Webapi__Dom__HtmlCollection.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__HtmlCollection.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__MutationRecord.ast)
+ (deps (:inputs  Webapi__Dom__MutationRecord.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__MutationRecord.d)
+ (deps (:inputs  Webapi__Dom__MutationRecord.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__MutationRecord.cmj Webapi__Dom__MutationRecord.cmi Webapi__Dom__MutationRecord.js Webapi__Dom__MutationRecord.js)
+ (deps (:inputs  Webapi__Dom__MutationRecord.ast)  (:dep_file Webapi__Dom__MutationRecord.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__MutationRecord.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlFormElement.ast)
+ (deps (:inputs  Webapi__Dom__HtmlFormElement.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlFormElement.d)
+ (deps (:inputs  Webapi__Dom__HtmlFormElement.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlFormElement.cmj Webapi__Dom__HtmlFormElement.cmi Webapi__Dom__HtmlFormElement.js Webapi__Dom__HtmlFormElement.js)
+ (deps (:inputs  Webapi__Dom__HtmlFormElement.ast)  (:dep_file Webapi__Dom__HtmlFormElement.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__HtmlFormElement.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TransitionEvent.ast)
+ (deps (:inputs  Webapi__Dom__TransitionEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TransitionEvent.d)
+ (deps (:inputs  Webapi__Dom__TransitionEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__TransitionEvent.cmj Webapi__Dom__TransitionEvent.cmi Webapi__Dom__TransitionEvent.js Webapi__Dom__TransitionEvent.js)
+ (deps (:inputs  Webapi__Dom__TransitionEvent.ast)  (:dep_file Webapi__Dom__TransitionEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__TransitionEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CompositionEvent.ast)
+ (deps (:inputs  Webapi__Dom__CompositionEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CompositionEvent.d)
+ (deps (:inputs  Webapi__Dom__CompositionEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CompositionEvent.cmj Webapi__Dom__CompositionEvent.cmi Webapi__Dom__CompositionEvent.js Webapi__Dom__CompositionEvent.js)
+ (deps (:inputs  Webapi__Dom__CompositionEvent.ast)  (:dep_file Webapi__Dom__CompositionEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__CompositionEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DocumentFragment.ast)
+ (deps (:inputs  Webapi__Dom__DocumentFragment.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DocumentFragment.d)
+ (deps (:inputs  Webapi__Dom__DocumentFragment.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DocumentFragment.cmj Webapi__Dom__DocumentFragment.cmi Webapi__Dom__DocumentFragment.js Webapi__Dom__DocumentFragment.js)
+ (deps (:inputs  Webapi__Dom__DocumentFragment.ast)  (:dep_file Webapi__Dom__DocumentFragment.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__DocumentFragment.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlImageElement.ast)
+ (deps (:inputs  Webapi__Dom__HtmlImageElement.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlImageElement.d)
+ (deps (:inputs  Webapi__Dom__HtmlImageElement.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlImageElement.cmj Webapi__Dom__HtmlImageElement.cmi Webapi__Dom__HtmlImageElement.js Webapi__Dom__HtmlImageElement.js)
+ (deps (:inputs  Webapi__Dom__HtmlImageElement.ast)  (:dep_file Webapi__Dom__HtmlImageElement.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__HtmlImageElement.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlInputElement.ast)
+ (deps (:inputs  Webapi__Dom__HtmlInputElement.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlInputElement.d)
+ (deps (:inputs  Webapi__Dom__HtmlInputElement.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__HtmlInputElement.cmj Webapi__Dom__HtmlInputElement.cmi Webapi__Dom__HtmlInputElement.js Webapi__Dom__HtmlInputElement.js)
+ (deps (:inputs  Webapi__Dom__HtmlInputElement.ast)  (:dep_file Webapi__Dom__HtmlInputElement.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__HtmlInputElement.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__MutationObserver.ast)
+ (deps (:inputs  Webapi__Dom__MutationObserver.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__MutationObserver.d)
+ (deps (:inputs  Webapi__Dom__MutationObserver.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__MutationObserver.cmj Webapi__Dom__MutationObserver.cmi Webapi__Dom__MutationObserver.js Webapi__Dom__MutationObserver.js)
+ (deps (:inputs  Webapi__Dom__MutationObserver.ast)  (:dep_file Webapi__Dom__MutationObserver.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__MutationObserver.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__BeforeUnloadEvent.ast)
+ (deps (:inputs  Webapi__Dom__BeforeUnloadEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__BeforeUnloadEvent.d)
+ (deps (:inputs  Webapi__Dom__BeforeUnloadEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__BeforeUnloadEvent.cmj Webapi__Dom__BeforeUnloadEvent.cmi Webapi__Dom__BeforeUnloadEvent.js Webapi__Dom__BeforeUnloadEvent.js)
+ (deps (:inputs  Webapi__Dom__BeforeUnloadEvent.ast)  (:dep_file Webapi__Dom__BeforeUnloadEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__BeforeUnloadEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DomImplementation.ast)
+ (deps (:inputs  Webapi__Dom__DomImplementation.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DomImplementation.d)
+ (deps (:inputs  Webapi__Dom__DomImplementation.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DomImplementation.cmj Webapi__Dom__DomImplementation.cmi Webapi__Dom__DomImplementation.js Webapi__Dom__DomImplementation.js)
+ (deps (:inputs  Webapi__Dom__DomImplementation.ast)  (:dep_file Webapi__Dom__DomImplementation.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__DomImplementation.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__WebGlContextEvent.ast)
+ (deps (:inputs  Webapi__Dom__WebGlContextEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__WebGlContextEvent.d)
+ (deps (:inputs  Webapi__Dom__WebGlContextEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__WebGlContextEvent.cmj Webapi__Dom__WebGlContextEvent.cmi Webapi__Dom__WebGlContextEvent.js Webapi__Dom__WebGlContextEvent.js)
+ (deps (:inputs  Webapi__Dom__WebGlContextEvent.ast)  (:dep_file Webapi__Dom__WebGlContextEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__WebGlContextEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CssStyleDeclaration.ast)
+ (deps (:inputs  Webapi__Dom__CssStyleDeclaration.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CssStyleDeclaration.d)
+ (deps (:inputs  Webapi__Dom__CssStyleDeclaration.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__CssStyleDeclaration.cmj Webapi__Dom__CssStyleDeclaration.cmi Webapi__Dom__CssStyleDeclaration.js Webapi__Dom__CssStyleDeclaration.js)
+ (deps (:inputs  Webapi__Dom__CssStyleDeclaration.ast)  (:dep_file Webapi__Dom__CssStyleDeclaration.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__CssStyleDeclaration.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__PageTransitionEvent.ast)
+ (deps (:inputs  Webapi__Dom__PageTransitionEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__PageTransitionEvent.d)
+ (deps (:inputs  Webapi__Dom__PageTransitionEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__PageTransitionEvent.cmj Webapi__Dom__PageTransitionEvent.cmi Webapi__Dom__PageTransitionEvent.js Webapi__Dom__PageTransitionEvent.js)
+ (deps (:inputs  Webapi__Dom__PageTransitionEvent.ast)  (:dep_file Webapi__Dom__PageTransitionEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__PageTransitionEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DocumentOrShadowRoot.ast)
+ (deps (:inputs  Webapi__Dom__DocumentOrShadowRoot.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DocumentOrShadowRoot.d)
+ (deps (:inputs  Webapi__Dom__DocumentOrShadowRoot.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__DocumentOrShadowRoot.cmj Webapi__Dom__DocumentOrShadowRoot.cmi Webapi__Dom__DocumentOrShadowRoot.js Webapi__Dom__DocumentOrShadowRoot.js)
+ (deps (:inputs  Webapi__Dom__DocumentOrShadowRoot.ast)  (:dep_file Webapi__Dom__DocumentOrShadowRoot.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__DocumentOrShadowRoot.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NonElementParentNode.ast)
+ (deps (:inputs  Webapi__Dom__NonElementParentNode.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NonElementParentNode.d)
+ (deps (:inputs  Webapi__Dom__NonElementParentNode.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NonElementParentNode.cmj Webapi__Dom__NonElementParentNode.cmi Webapi__Dom__NonElementParentNode.js Webapi__Dom__NonElementParentNode.js)
+ (deps (:inputs  Webapi__Dom__NonElementParentNode.ast)  (:dep_file Webapi__Dom__NonElementParentNode.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__NonElementParentNode.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__IdbVersionChangeEvent.ast)
+ (deps (:inputs  Webapi__Dom__IdbVersionChangeEvent.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__IdbVersionChangeEvent.d)
+ (deps (:inputs  Webapi__Dom__IdbVersionChangeEvent.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__IdbVersionChangeEvent.cmj Webapi__Dom__IdbVersionChangeEvent.cmi Webapi__Dom__IdbVersionChangeEvent.js Webapi__Dom__IdbVersionChangeEvent.js)
+ (deps (:inputs  Webapi__Dom__IdbVersionChangeEvent.ast)  (:dep_file Webapi__Dom__IdbVersionChangeEvent.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__IdbVersionChangeEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ProcessingInstruction.ast)
+ (deps (:inputs  Webapi__Dom__ProcessingInstruction.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ProcessingInstruction.d)
+ (deps (:inputs  Webapi__Dom__ProcessingInstruction.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__ProcessingInstruction.cmj Webapi__Dom__ProcessingInstruction.cmi Webapi__Dom__ProcessingInstruction.js Webapi__Dom__ProcessingInstruction.js)
+ (deps (:inputs  Webapi__Dom__ProcessingInstruction.ast)  (:dep_file Webapi__Dom__ProcessingInstruction.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__ProcessingInstruction.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NonDocumentTypeChildNode.ast)
+ (deps (:inputs  Webapi__Dom__NonDocumentTypeChildNode.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NonDocumentTypeChildNode.d)
+ (deps (:inputs  Webapi__Dom__NonDocumentTypeChildNode.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Dom__NonDocumentTypeChildNode.cmj Webapi__Dom__NonDocumentTypeChildNode.cmi Webapi__Dom__NonDocumentTypeChildNode.js Webapi__Dom__NonDocumentTypeChildNode.js)
+ (deps (:inputs  Webapi__Dom__NonDocumentTypeChildNode.ast)  (:dep_file Webapi__Dom__NonDocumentTypeChildNode.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I ../Webapi__Canvas -I . -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Dom:.js -bs-package-output es6:src/Webapi/Webapi__Dom:.js -o Webapi__Dom__NonDocumentTypeChildNode.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ 
+(alias (name bsb_world)(deps  Webapi__Dom__NonDocumentTypeChildNode.js Webapi__Dom__NonDocumentTypeChildNode.js Webapi__Dom__ProcessingInstruction.js Webapi__Dom__ProcessingInstruction.js Webapi__Dom__IdbVersionChangeEvent.js Webapi__Dom__IdbVersionChangeEvent.js Webapi__Dom__NonElementParentNode.js Webapi__Dom__NonElementParentNode.js Webapi__Dom__DocumentOrShadowRoot.js Webapi__Dom__DocumentOrShadowRoot.js Webapi__Dom__PageTransitionEvent.js Webapi__Dom__PageTransitionEvent.js Webapi__Dom__CssStyleDeclaration.js Webapi__Dom__CssStyleDeclaration.js Webapi__Dom__WebGlContextEvent.js Webapi__Dom__WebGlContextEvent.js Webapi__Dom__DomImplementation.js Webapi__Dom__DomImplementation.js Webapi__Dom__BeforeUnloadEvent.js Webapi__Dom__BeforeUnloadEvent.js Webapi__Dom__MutationObserver.js Webapi__Dom__MutationObserver.js Webapi__Dom__HtmlInputElement.js Webapi__Dom__HtmlInputElement.js Webapi__Dom__HtmlImageElement.js Webapi__Dom__HtmlImageElement.js Webapi__Dom__DocumentFragment.js Webapi__Dom__DocumentFragment.js Webapi__Dom__CompositionEvent.js Webapi__Dom__CompositionEvent.js Webapi__Dom__TransitionEvent.js Webapi__Dom__TransitionEvent.js Webapi__Dom__HtmlFormElement.js Webapi__Dom__HtmlFormElement.js Webapi__Dom__MutationRecord.js Webapi__Dom__MutationRecord.js Webapi__Dom__HtmlCollection.js Webapi__Dom__HtmlCollection.js Webapi__Dom__ClipboardEvent.js Webapi__Dom__ClipboardEvent.js Webapi__Dom__AnimationEvent.js Webapi__Dom__AnimationEvent.js Webapi__Dom__ValidityState.js Webapi__Dom__ValidityState.js Webapi__Dom__ProgressEvent.js Webapi__Dom__ProgressEvent.js Webapi__Dom__PopStateEvent.js Webapi__Dom__PopStateEvent.js Webapi__Dom__KeyboardEvent.js Webapi__Dom__KeyboardEvent.js Webapi__Dom__CharacterData.js Webapi__Dom__CharacterData.js Webapi__Dom__SvgZoomEvent.js Webapi__Dom__SvgZoomEvent.js Webapi__Dom__StorageEvent.js Webapi__Dom__StorageEvent.js Webapi__Dom__RelatedEvent.js Webapi__Dom__RelatedEvent.js Webapi__Dom__PointerEvent.js Webapi__Dom__PointerEvent.js Webapi__Dom__NodeIterator.js Webapi__Dom__NodeIterator.js Webapi__Dom__NamedNodeMap.js Webapi__Dom__NamedNodeMap.js Webapi__Dom__HtmlDocument.js Webapi__Dom__HtmlDocument.js Webapi__Dom__DomTokenList.js Webapi__Dom__DomTokenList.js Webapi__Dom__DocumentType.js Webapi__Dom__DocumentType.js Webapi__Dom__CdataSection.js Webapi__Dom__CdataSection.js Webapi__Dom__HtmlElement.js Webapi__Dom__HtmlElement.js Webapi__Dom__EventTarget.js Webapi__Dom__EventTarget.js Webapi__Dom__CustomEvent.js Webapi__Dom__CustomEvent.js Webapi__Dom__WheelEvent.js Webapi__Dom__WheelEvent.js Webapi__Dom__TreeWalker.js Webapi__Dom__TreeWalker.js Webapi__Dom__TrackEvent.js Webapi__Dom__TrackEvent.js Webapi__Dom__TouchEvent.js Webapi__Dom__TouchEvent.js Webapi__Dom__ShadowRoot.js Webapi__Dom__ShadowRoot.js Webapi__Dom__ParentNode.js Webapi__Dom__ParentNode.js Webapi__Dom__NodeFilter.js Webapi__Dom__NodeFilter.js Webapi__Dom__MouseEvent.js Webapi__Dom__MouseEvent.js Webapi__Dom__InputEvent.js Webapi__Dom__InputEvent.js Webapi__Dom__FocusEvent.js Webapi__Dom__FocusEvent.js Webapi__Dom__ErrorEvent.js Webapi__Dom__ErrorEvent.js Webapi__Dom__CloseEvent.js Webapi__Dom__CloseEvent.js Webapi__Dom__TimeEvent.js Webapi__Dom__TimeEvent.js Webapi__Dom__Selection.js Webapi__Dom__Selection.js Webapi__Dom__DragEvent.js Webapi__Dom__DragEvent.js Webapi__Dom__ChildNode.js Webapi__Dom__ChildNode.js Webapi__Dom__Slotable.js Webapi__Dom__Slotable.js Webapi__Dom__NodeList.js Webapi__Dom__NodeList.js Webapi__Dom__Location.js Webapi__Dom__Location.js Webapi__Dom__Document.js Webapi__Dom__Document.js Webapi__Dom__UiEvent.js Webapi__Dom__UiEvent.js Webapi__Dom__History.js Webapi__Dom__History.js Webapi__Dom__Element.js Webapi__Dom__Element.js Webapi__Dom__DomRect.js Webapi__Dom__DomRect.js Webapi__Dom__Comment.js Webapi__Dom__Comment.js Webapi__Dom__Window.js Webapi__Dom__Window.js Webapi__Dom__Types.js Webapi__Dom__Types.js Webapi__Dom__Range.js Webapi__Dom__Range.js Webapi__Dom__Image.js Webapi__Dom__Image.js Webapi__Dom__Event.js Webapi__Dom__Event.js Webapi__Dom__Text.js Webapi__Dom__Text.js Webapi__Dom__Node.js Webapi__Dom__Node.js Webapi__Dom__Attr.js Webapi__Dom__Attr.js)
+(enabled_if (= %{ocaml_version} "4.12.0+BS"))))
+(subdir ./node_modules/bs-webapi/src/Webapi/Webapi__Canvas
+(rule
+(targets  Webapi__Canvas__WebGl.ast)
+ (deps (:inputs  Webapi__Canvas__WebGl.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Canvas__WebGl.d)
+ (deps (:inputs  Webapi__Canvas__WebGl.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Canvas__WebGl.cmj Webapi__Canvas__WebGl.cmi Webapi__Canvas__WebGl.js Webapi__Canvas__WebGl.js)
+ (deps (:inputs  Webapi__Canvas__WebGl.ast)  (:dep_file Webapi__Canvas__WebGl.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ../Webapi__Dom -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Canvas:.js -bs-package-output es6:src/Webapi/Webapi__Canvas:.js -o Webapi__Canvas__WebGl.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Canvas__Canvas2d.ast)
+ (deps (:inputs  Webapi__Canvas__Canvas2d.re) )
+(action
+ (run bsc  -w a -bs-v 9.1.0 -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Canvas__Canvas2d.d)
+ (deps (:inputs  Webapi__Canvas__Canvas2d.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news/node_modules/bs-webapi  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Webapi__Canvas__Canvas2d.cmj Webapi__Canvas__Canvas2d.cmi Webapi__Canvas__Canvas2d.js Webapi__Canvas__Canvas2d.js)
+ (deps (:inputs  Webapi__Canvas__Canvas2d.ast)  (:dep_file Webapi__Canvas__Canvas2d.d) ../../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ../Webapi__Dom -I .. -I ../..   -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -w a -bs-package-name bs-webapi -bs-package-output commonjs:src/Webapi/Webapi__Canvas:.js -bs-package-output es6:src/Webapi/Webapi__Canvas:.js -o Webapi__Canvas__Canvas2d.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ 
+(alias (name bsb_world)(deps  Webapi__Canvas__Canvas2d.js Webapi__Canvas__Canvas2d.js Webapi__Canvas__WebGl.js Webapi__Canvas__WebGl.js)
+(enabled_if (= %{ocaml_version} "4.12.0+BS"))))
+
+
+
+(subdir ./src
+(rule
+(targets  app.ast)
+ (deps (:inputs  app.re) )
+(action
+ (run bsc  -bs-v 9.1.0 -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  app.d)
+ (deps (:inputs  app.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  app.cmj app.cmi app.js app.js)
+ (deps (:inputs  app.ast)  (:dep_file app.d) ../bsconfig.json(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Webapi__Dom -I ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas  -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -bs-package-name reason-react-hacker-news -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o app.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  link.ast)
+ (deps (:inputs  link.re) )
+(action
+ (run bsc  -bs-v 9.1.0 -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  link.d)
+ (deps (:inputs  link.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  link.cmj link.cmi link.js link.js)
+ (deps (:inputs  link.ast)  (:dep_file link.d) ../bsconfig.json(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Webapi__Dom -I ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas  -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -bs-package-name reason-react-hacker-news -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o link.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  index.ast)
+ (deps (:inputs  index.re) )
+(action
+ (run bsc  -bs-v 9.1.0 -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  index.d)
+ (deps (:inputs  index.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  index.cmj index.cmi index.js index.js)
+ (deps (:inputs  index.ast)  (:dep_file index.d) ../bsconfig.json(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Webapi__Dom -I ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas  -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -bs-package-name reason-react-hacker-news -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o index.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Utils.ast)
+ (deps (:inputs  Utils.re) )
+(action
+ (run bsc  -bs-v 9.1.0 -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Utils.d)
+ (deps (:inputs  Utils.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  Utils.cmj Utils.cmi Utils.js Utils.js)
+ (deps (:inputs  Utils.ast)  (:dep_file Utils.d) ../bsconfig.json(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Webapi__Dom -I ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas  -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -bs-package-name reason-react-hacker-news -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o Utils.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  NotFound.ast)
+ (deps (:inputs  NotFound.re) )
+(action
+ (run bsc  -bs-v 9.1.0 -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  NotFound.d)
+ (deps (:inputs  NotFound.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  NotFound.cmj NotFound.cmi NotFound.js NotFound.js)
+ (deps (:inputs  NotFound.ast)  (:dep_file NotFound.d) ../bsconfig.json(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Webapi__Dom -I ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas  -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -bs-package-name reason-react-hacker-news -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o NotFound.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  StoryData.ast)
+ (deps (:inputs  StoryData.re) )
+(action
+ (run bsc  -bs-v 9.1.0 -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  StoryData.d)
+ (deps (:inputs  StoryData.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  StoryData.cmj StoryData.cmi StoryData.js StoryData.js)
+ (deps (:inputs  StoryData.ast)  (:dep_file StoryData.d) ../bsconfig.json(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Webapi__Dom -I ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas  -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -bs-package-name reason-react-hacker-news -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o StoryData.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  CommentList.ast)
+ (deps (:inputs  CommentList.re) )
+(action
+ (run bsc  -bs-v 9.1.0 -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  CommentList.d)
+ (deps (:inputs  CommentList.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  CommentList.cmj CommentList.cmi CommentList.js CommentList.js)
+ (deps (:inputs  CommentList.ast)  (:dep_file CommentList.d) ../bsconfig.json(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Webapi__Dom -I ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas  -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -bs-package-name reason-react-hacker-news -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o CommentList.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  CommentsPage.ast)
+ (deps (:inputs  CommentsPage.re) )
+(action
+ (run bsc  -bs-v 9.1.0 -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  CommentsPage.d)
+ (deps (:inputs  CommentsPage.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  CommentsPage.cmj CommentsPage.cmi CommentsPage.js CommentsPage.js)
+ (deps (:inputs  CommentsPage.ast)  (:dep_file CommentsPage.d) ../bsconfig.json(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Webapi__Dom -I ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas  -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -bs-package-name reason-react-hacker-news -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o CommentsPage.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  StoryListItem.ast)
+ (deps (:inputs  StoryListItem.re) )
+(action
+ (run bsc  -bs-v 9.1.0 -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  StoryListItem.d)
+ (deps (:inputs  StoryListItem.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  StoryListItem.cmj StoryListItem.cmi StoryListItem.js StoryListItem.js)
+ (deps (:inputs  StoryListItem.ast)  (:dep_file StoryListItem.d) ../bsconfig.json(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Webapi__Dom -I ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas  -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -bs-package-name reason-react-hacker-news -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o StoryListItem.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  TopStoriesPage.ast)
+ (deps (:inputs  TopStoriesPage.re) )
+(action
+ (run bsc  -bs-v 9.1.0 -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  TopStoriesPage.d)
+ (deps (:inputs  TopStoriesPage.ast) )
+(action (run bsb_helper -cwd /Volumes/SSD/Github/reason-react-hacker-news  %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ (rule
+(targets  TopStoriesPage.cmj TopStoriesPage.cmi TopStoriesPage.js TopStoriesPage.js)
+ (deps (:inputs  TopStoriesPage.ast)  (:dep_file TopStoriesPage.d) ../bsconfig.json(alias ../node_modules/reason-react/src/bsb_world)(alias ../node_modules/reason-react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_parse_depend %{dep_file}) (run bsc -I . -I ../node_modules/reason-react/src -I ../node_modules/reason-react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Webapi__Dom -I ../node_modules/bs-webapi/src/Webapi/Webapi__Canvas  -I /Volumes/SSD/.esy/3__________________________________________________________________/i/bs_platform-410a6e33/lib/melange  -bs-package-name reason-react-hacker-news -bs-package-output commonjs:src:.js -bs-package-output es6:src:.js -o TopStoriesPage.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0+BS")) )
+ 
+(alias (name bsb_world)(deps  TopStoriesPage.js TopStoriesPage.js StoryListItem.js StoryListItem.js CommentsPage.js CommentsPage.js CommentList.js CommentList.js StoryData.js StoryData.js NotFound.js NotFound.js Utils.js Utils.js index.js index.js link.js link.js app.js app.js)
+(enabled_if (= %{ocaml_version} "4.12.0+BS"))))
+
+
+
+(data_only_dirs node_modules);;;;BSB GENERATED: NO EDIT}
